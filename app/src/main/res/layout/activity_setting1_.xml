@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kumar.vikas.jecchat.vk.kumar.vikas.jecchat.Setting1_Activity">
+    <include
+        android:id="@+id/setting1Toolbar"
+        layout="@layout/tool_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setting1Toolbar"
+        android:id="@+id/goToSetting">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/setting1Image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/user"
+            android:transitionName="myImage"/>
+
+
+        <TextView
+            android:id="@+id/setting1Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/setting1Image"
+            android:text="Display name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/setting1Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/setting1Name"
+            android:layout_below="@+id/setting1Name"
+            android:text="TextView" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/goToSetting"
+        android:layout_marginTop="3dp"
+        android:background="#c0c0c0" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/setting1Posts"
+        android:background="#c0c0c0" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/settingWebView"
+        android:background="#c0c0c0" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignBottom="@+id/setting1ChangePassword"
+        android:layout_alignStart="@+id/view"
+        android:background="#c0c0c0"
+        android:id="@+id/view2" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="fill_parent"
+
+        android:layout_height="0.5dp"
+        android:layout_alignBottom="@+id/setting1DeleteAccount"
+        android:layout_alignParentStart="true"
+        android:background="#c0c0c0" />
+
+
+    <TextView
+        android:id="@+id/setting1Posts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/goToSetting"
+        android:padding="15dp"
+        android:text="Your Posts"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/setting1ChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view4"
+        android:padding="15dp"
+        android:text="Change Password"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/setting1DeleteAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view2"
+        android:padding="15dp"
+        android:text="Deactivate Your Account"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/settingWebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view"
+        android:padding="15dp"
+        android:text="Go to website"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

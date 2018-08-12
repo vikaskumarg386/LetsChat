@@ -1,8 +1,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vikas.jecchat.timeLineF">
+    tools:context="com.kumar.vikas.jecchat.vk.kumar.vikas.jecchat.timeLineF">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -10,5 +11,15 @@
         android:id="@+id/timelineRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_post_floting_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="65dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/draw"
+        app:backgroundTint="?attr/colorPrimary" />
 
 </FrameLayout>

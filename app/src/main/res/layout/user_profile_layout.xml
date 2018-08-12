@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/collegeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="collegeName"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/collegeFieldOfWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/collegeName"
+        android:gravity="center"
+        android:text="fieldOfWork"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/collegeBranch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/collegeFieldOfWork"
+        android:gravity="center"
+        android:text="branch"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/collegeSemester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/collegeBranch"
+        android:gravity="center"
+        android:text="semester"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/collegeYearOfGraduation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/collegeSemester"
+        android:gravity="center"
+        android:text="Year of graduation"
+        android:textSize="20sp" />
+</RelativeLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray"
-    tools:context="com.example.vikas.jecchat.ChatActivity">
+    tools:context="com.kumar.vikas.jecchat.ChatActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -54,22 +54,19 @@
             app:srcCompat="@drawable/ic_send_black_24dp" />
     </LinearLayout>
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefreshLayout"
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/linearLayout"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/layout1">
+        android:layout_below="@+id/layout1"
+        android:layout_marginBottom="5dp"></android.support.v7.widget.RecyclerView>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/chatRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/linearLayout"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/layout1"></android.support.v7.widget.RecyclerView>
-    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
 
 
     <include

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_message_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp">
+
+    <RelativeLayout
+        android:id="@+id/user_relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/chat_text_shape_sender"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/WelcomeToChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user2_text"
+            android:text="time"
+            android:textColor="@color/colorWhiteTransparent" />
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true" />
+
+        <TextView
+            android:id="@+id/user2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/user_image"
+            android:gravity="left"
+            android:text="displayMessage"
+            android:textColor="@color/colorWhite"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            android:autoLink="web"/>
+
+        <TextView
+            android:id="@+id/recevirName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/user2_text"
+            android:layout_toEndOf="@+id/user_image"
+            android:text=" You"
+            android:textColor="@color/colorWhiteTransparent" />
+
+        <ProgressBar
+            android:id="@+id/user2_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/user2_text"
+            android:layout_toEndOf="@id/WelcomeToChat"
+            android:progressBackgroundTint="@android:color/white"
+            android:visibility="invisible" />
+
+        <VideoView
+            android:id="@+id/user_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/user2_text"
+            android:layout_alignEnd="@+id/user_image"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/user_image"
+            android:layout_below="@+id/recevirName"
+            android:layout_marginTop="15dp"
+            android:layout_toStartOf="@id/WelcomeToChat"
+            android:adjustViewBounds="true" />
+
+        <ImageButton
+            android:id="@+id/user_playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/user2_text"
+            android:layout_alignEnd="@+id/user_video"
+            android:layout_alignStart="@+id/user_video"
+            android:layout_below="@+id/recevirName"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="300dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_play_circle_outline_white_24dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/group_relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/chat_text_shape_receiver"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="displayName"
+            android:textColor="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/group_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/group_name"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true" />
+
+        <TextView
+            android:id="@+id/group_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/group_image"
+            android:text="display message"
+            android:textColor="@color/colorPrimaryDark"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            android:autoLink="web"/>
+
+        <TextView
+            android:id="@+id/group_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/group_text"
+            android:text="time" />
+
+        <ProgressBar
+            android:id="@+id/group_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/group_text"
+            android:layout_toEndOf="@id/group_time"
+            android:visibility="invisible" />
+
+        <VideoView
+            android:id="@+id/group_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/group_text"
+            android:layout_alignEnd="@+id/group_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignStart="@+id/group_image"
+            android:layout_below="@+id/group_name"
+            android:adjustViewBounds="true" />
+
+        <ImageButton
+            android:id="@+id/group_playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/group_text"
+            android:layout_alignEnd="@+id/group_video"
+            android:layout_alignStart="@+id/group_video"
+            android:layout_below="@+id/group_name"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_play_circle_outline_white_24dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

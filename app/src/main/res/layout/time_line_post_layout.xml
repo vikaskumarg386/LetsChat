@@ -9,47 +9,74 @@
 
     <ImageView
         android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timelinePostMessage"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <VideoView
+        android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/timelinePostMessage"
+        android:layout_above="@+id/no_comments"
         android:layout_below="@+id/timelinePostMessage"
-        android:layout_toEndOf="@id/timelinePostImage"
-        android:scaleType="matrix" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:focusable="auto"
+        android:onClick="videoPlay"
+        android:scaleType="centerCrop" />
+
+
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/timelinePostImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="2dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="18dp"
         android:src="@drawable/user" />
+
     <TextView
         android:id="@+id/timelinePostName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/timelinePostImage"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="12dp"
         android:layout_toEndOf="@+id/timelinePostImage"
         android:text="Display Name"
         android:textColor="@android:color/background_dark"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
+
     <TextView
         android:id="@+id/timeLinePostTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/timelinePostName"
-        android:layout_below="@+id/timelinePostName"
+        android:layout_below="@+id/branchSem"
         android:text="TextView"
         android:textSize="12sp" />
+
     <TextView
         android:id="@+id/timelinePostMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/timeLinePostTime"
-        android:layout_below="@+id/timeLinePostTime"
+        android:layout_alignStart="@+id/timelinePostImage"
+        android:layout_below="@+id/timelinePostImage"
+        android:layout_marginTop="8dp"
+        android:autoLink="web"
+        android:enabled="true"
+        android:focusable="true"
+        android:longClickable="true"
         android:text="post message"
         android:textColor="@color/colorPrimaryDark"
+        android:textIsSelectable="true"
         android:textSize="17sp" />
 
     <TextView
@@ -58,6 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/imageView2"
         android:layout_below="@+id/imageView2"
+        android:layout_marginLeft="60dp"
         android:text="likes"
         android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
@@ -66,27 +94,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView2"
-        android:layout_toEndOf="@+id/timeLinePostTime"
+        android:layout_marginLeft="75dp"
+        android:layout_toEndOf="@+id/like"
         android:text="comments"
         android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
     <ImageButton
         android:id="@+id/like"
         android:layout_width="130dp"
         android:layout_height="30dp"
-        android:layout_alignStart="@+id/no_likes"
         android:layout_below="@+id/no_likes"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
         android:alpha="0.7"
         android:background="@drawable/button_shape"
         android:minHeight="36dp"
         android:scaleType="centerCrop"
         android:src="@drawable/like"
-        android:text="Button" />
+        android:text="like"
+        android:textColor="?android:attr/colorPrimaryDark" />
+
     <ImageButton
         android:id="@+id/comment"
         android:layout_width="130dp"
         android:layout_height="30dp"
         android:layout_below="@+id/no_comments"
+        android:layout_marginLeft="55dp"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/like"
         android:alpha="0.7"
@@ -95,4 +128,58 @@
         android:scaleType="centerCrop"
         android:src="@drawable/comment"
         android:text="Button" />
+
+    <TextView
+        android:id="@+id/branchSem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/timelinePostName"
+        android:layout_below="@+id/timelinePostName"
+        android:text="TextView"
+        android:textSize="10sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray" />
+
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/branchSem"
+        android:layout_alignEnd="@+id/imageView2"
+        android:layout_marginRight="5dp"
+        android:alpha="0.7"
+        android:background="@android:color/transparent"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/menu" />
+
+    <ImageButton
+        android:id="@+id/playVideo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/no_comments"
+        android:layout_alignTop="@+id/timelinePostMessage"
+        android:layout_below="@+id/timelinePostMessage"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:padding="100dp"
+        app:srcCompat="@drawable/ic_play_circle_outline_white_24dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/comment"
+        android:layout_alignTop="@+id/timelinePostMessage"
+        android:layout_below="@+id/timelinePostMessage"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_toEndOf="@+id/like" />
+
+
 </RelativeLayout>

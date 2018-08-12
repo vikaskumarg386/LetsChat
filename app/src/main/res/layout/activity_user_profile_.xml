@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_gray"
-    tools:context="com.example.vikas.jecchat.UserProfile_Activity">
+    tools:context="com.kumar.vikas.jecchat.UserProfile_Activity">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <ImageView
             android:id="@+id/display_cover_image"
             android:layout_width="match_parent"
@@ -20,6 +19,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/circleImageView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,8 +32,8 @@
 
         <Button
             android:id="@+id/decline_request"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="221dp"
+            android:layout_height="46dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="8dp"
@@ -42,20 +43,21 @@
             android:text="Decline friend request"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.998" />
 
         <Button
             android:id="@+id/send_request"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="214dp"
+            android:layout_height="38dp"
             android:layout_alignBaseline="@+id/decline_request"
             android:layout_alignBottom="@+id/decline_request"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="464dp"
             android:layout_toEndOf="@+id/decline_request"
             android:background="?attr/colorError"
             android:minHeight="38dp"
@@ -65,21 +67,23 @@
             app:layout_constraintBottom_toTopOf="@+id/decline_request"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.986" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/s_tatus"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="280dp"
+            android:gravity="center"
             android:text="status......."
             android:textColor="@color/common_google_signin_btn_text_dark_default"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/profileEnroll"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -89,16 +93,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="256dp"
+            android:layout_marginTop="248dp"
             android:text="display  name"
             android:textColor="@android:color/white"
             android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/s_tatus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <TextView
             android:id="@+id/profileEmailid"
@@ -110,33 +115,35 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="TextView"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/send_request"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.788" />
+            app:layout_constraintVertical_bias="0.969" />
 
 
         <TextView
             android:id="@+id/userSemester"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="TextView"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/profileEmailid"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.726" />
+            app:layout_constraintVertical_bias="0.992" />
 
 
         <TextView
@@ -149,34 +156,36 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="TextView"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/userSemester"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.665" />
+            app:layout_constraintVertical_bias="1.0" />
 
 
         <TextView
             android:id="@+id/profileEnroll"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:layout_below="@+id/s_tatus"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="TextView"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/profileBranch"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.602" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circleImageView"
@@ -189,13 +198,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="136dp"
             android:src="@drawable/user"
-            app:civ_border_width="2dp"
             app:civ_border_color="@color/dark_gray"
+            app:civ_border_width="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.018" />
+            app:layout_constraintVertical_bias="0.006" />
     </android.support.constraint.ConstraintLayout>
 
 </RelativeLayout>

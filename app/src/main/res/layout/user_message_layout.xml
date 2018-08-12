@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_message_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
+
+
+    <RelativeLayout
+        android:id="@+id/user2_relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/chat_text_shape_receiver"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/user2_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true" />
+
+
+        <TextView
+            android:id="@+id/user2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/user2_image"
+            android:text="display message"
+            android:textColor="@color/colorPrimaryDark"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            android:autoLink="web"/>
+
+        <TextView
+            android:id="@+id/WelcomeToChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/user2_text"
+            android:text="time" />
+
+        <ProgressBar
+            android:id="@+id/user2progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/user2_text"
+            android:layout_toEndOf="@id/WelcomeToChat"
+            android:visibility="invisible" />
+
+        <VideoView
+            android:id="@+id/user2_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/user2_text"
+            android:layout_alignEnd="@+id/user2_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/user2_image"
+            android:layout_below="@id/user2_image"
+            android:layout_toStartOf="@id/WelcomeToChat"
+            android:adjustViewBounds="true" />
+
+        <ImageButton
+            android:id="@+id/user2_playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/user2_text"
+            android:layout_alignEnd="@+id/user2_video"
+            android:layout_alignStart="@+id/user2_video"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="110dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_play_circle_outline_white_24dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user1_relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/chat_text_shape_sender"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/user_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_text"
+            android:text="time"
+            android:textColor="@color/colorWhiteTransparent" />
+
+        <ImageView
+            android:id="@+id/user1_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true" />
+
+        <TextView
+            android:id="@+id/user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/user1_image"
+            android:gravity="left"
+            android:text="displayMessage"
+            android:textColor="@color/colorWhite"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            android:autoLink="web"/>
+
+        <ProgressBar
+            android:id="@+id/userProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/user_text"
+            android:layout_toEndOf="@id/user_time"
+            android:visibility="invisible" />
+
+        <VideoView
+            android:id="@+id/user1_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/user_text"
+            android:layout_alignEnd="@+id/user1_image"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/user1_image"
+            android:layout_below="@id/user1_image"
+            android:layout_toStartOf="@id/user_time"
+            android:adjustViewBounds="true"
+            android:foregroundGravity="right" />
+
+        <ImageButton
+            android:id="@+id/user1_playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/user_text"
+            android:layout_alignEnd="@+id/user1_video"
+            android:layout_alignStart="@+id/user1_video"
+            android:layout_marginBottom="110dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_play_circle_outline_white_24dp" />
+
+        <TextView
+            android:id="@+id/seen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_text"
+            android:layout_toEndOf="@+id/userProgressBar"
+            android:textColor="@color/colorWhiteTransparent"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

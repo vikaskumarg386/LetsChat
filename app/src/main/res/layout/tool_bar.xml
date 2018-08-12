@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@color/dark_gray"
     android:theme="@style/AppTheme"
-    app:titleTextColor="@color/common_google_signin_btn_text_dark_default">
+    app:titleTextColor="@color/common_google_signin_btn_text_dark_default"
+    app:layout_scrollFlags="scroll|enterAlways">
 
 </android.support.v7.widget.Toolbar>

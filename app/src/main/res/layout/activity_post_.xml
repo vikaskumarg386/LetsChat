@@ -4,7 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vikas.jecchat.Post_Activity">
+    tools:context="com.kumar.vikas.jecchat.vk.kumar.vikas.jecchat.Post_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postImage"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addImage"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:background="@drawable/chat_text_shape_sender"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Add image"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/addVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/addMusic"
+            android:layout_toStartOf="@+id/addMusic"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:background="@drawable/chat_text_shape_sender"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="add video"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/addFile"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:background="@drawable/chat_text_shape_sender"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="add file"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
 
     <include
         android:id="@+id/postToolBar"
@@ -14,6 +71,8 @@
         android:id="@+id/postImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/postVideo"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/timelineUserMessage"
         android:background="@drawable/layout_shape"
@@ -24,33 +83,22 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/addButton"
-        android:background="@drawable/layout_shape"
-        android:hint="Enter your message"
+        android:layout_below="@+id/postToolBar"
+        android:background="@android:color/transparent"
+        android:hint="What's going on in your college?"
         android:paddingBottom="60dp"
         android:paddingLeft="5dp"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="17sp" />
 
-    <ImageButton
-        android:id="@+id/addButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/postToolBar"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@+id/textView5"
-        android:alpha="0.8"
-        app:srcCompat="@drawable/ic_add_black_24dp" />
-
-    <TextView
-        android:id="@+id/textView5"
+    <VideoView
+        android:id="@+id/postVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/timelineUserMessage"
-        android:layout_alignTop="@+id/addButton"
-        android:text="Add Image"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/timelineUserMessage"
+        android:layout_marginBottom="50dp"
+        android:adjustViewBounds="true" />
 
 
 </RelativeLayout>

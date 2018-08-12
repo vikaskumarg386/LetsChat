@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vikas.jecchat.Comment_Activity">
+    tools:context="com.kumar.vikas.jecchat.vk.kumar.vikas.jecchat.Comment_Activity">
     <include layout="@layout/tool_bar"
         android:id="@+id/commentToolbar" />
 
@@ -26,7 +26,8 @@
             android:background="@android:color/transparent"
             android:ems="10"
             android:hint="enter your comment"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:focusable="true"/>
 
         <ImageButton
             android:id="@+id/sendComment"

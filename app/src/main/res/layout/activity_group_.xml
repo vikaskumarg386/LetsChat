@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.kumar.vikas.jecchat.vk.kumar.vikas.jecchat.Group_Activity">
+
+    <include layout="@layout/tool_bar"
+        android:id="@+id/groupToolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/groupRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/groupToolbar" />
+
+    <EditText
+        android:id="@+id/groupSearchText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/groupRecyclerView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="100dp"
+        android:background="@color/colorPrimary"
+        android:ems="10"
+        android:hint="search here.."
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:visibility="invisible" />
+</RelativeLayout>

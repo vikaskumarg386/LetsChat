@@ -2,35 +2,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circleImageView2"
+        android:id="@+id/notiImage"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
         android:src="@drawable/user" />
 
     <TextView
-        android:id="@+id/displayUserName"
+        android:id="@+id/notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/circleImageView2"
+        android:layout_alignTop="@+id/notiImage"
         android:layout_marginStart="24dp"
-        android:layout_toEndOf="@+id/circleImageView2"
+        android:layout_toEndOf="@+id/notiImage"
         android:text="Display Name"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/displayUserStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/circleImageView2"
-        android:layout_alignStart="@+id/displayUserName"
+        android:layout_alignStart="@+id/notification"
+        android:layout_below="@+id/notification"
         android:text="Status"
         android:textSize="12sp" />
 
@@ -38,10 +38,45 @@
         android:id="@+id/onlineIcon"
         android:layout_width="10dp"
         android:layout_height="10dp"
-        android:layout_alignBottom="@+id/displayUserName"
-        android:layout_marginStart="18dp"
-        android:layout_toEndOf="@+id/displayUserName"
+        android:layout_alignBottom="@+id/notification"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/notification"
         android:visibility="invisible"
         app:srcCompat="@drawable/onlineicon" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/displayUserStatus"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="70dp"
+        android:background="#c0c0c0" />
+
+    <ImageView
+        android:id="@+id/doneView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="21dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_done_black_24dp" />
+
+    <TextView
+        android:id="@+id/newMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/onlineIcon"
+        android:background="@drawable/chat_text_shape_sender"
+        android:gravity="top|right"
+        android:padding="5dp"
+        android:text="new"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="invisible" />
 
 </RelativeLayout>
